@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-
 * {
 	font-family: "DM Sans", sans-serif;
 	margin: 0;
 	padding: 0;
 }
-
+.none {
+	display: none;
+}
 body {
 	display: flex;
 	align-items: center;
@@ -13,7 +14,6 @@ body {
 	min-height: 100vh;
 	background-color: rgba(249, 236, 226, 1);
 }
-
 main {
 	display: flex;
 	flex-direction: column;
@@ -21,13 +21,11 @@ main {
 	justify-content: center;
 	gap: 22px;
 }
-
 h1 {
 	font-size: 48px;
 	font-weight: 700;
 	color: rgba(56, 35, 20, 1);
 }
-
 #principale {
 	display: flex;
 	flex-direction: column;
@@ -35,13 +33,11 @@ h1 {
 	justify-content: space-between;
 	gap: 28px;
 }
-
 .grid-organize {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	gap: 12px;
 }
-
 #depense {
 	padding: 12px 12px;
 	border: none;
@@ -50,7 +46,6 @@ h1 {
 	font-weight: 700;
 	color: rgba(146, 133, 122, 1);
 }
-
 .btn-primary {
 	border: none;
 	border-radius: 12px;
@@ -58,12 +53,11 @@ h1 {
 	color: white;
 	font-weight: 800;
 	font-size: 15px;
+	padding: 12px;
 }
-
 .btn-primary:active {
-	background-color: rgba(236, 117, 93, 1);
+	opacity: 0.6;
 }
-
 #liste {
 	display: flex;
 	flex-direction: column;
@@ -73,7 +67,6 @@ h1 {
 	height: 160px;
 	scroll-behavior: auto;
 }
-
 .listeobject {
 	padding: 12px 24px;
 	border: 2px solid rgba(236, 117, 93, 1);
@@ -81,4 +74,19 @@ h1 {
 	color: rgba(236, 117, 93, 1);
 	font-size: 24px;
 	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+h2 {
+	text-align: center;
+	color: rgba(146, 133, 122, 1);
+}
+label {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	font-size: 16px;
+	font-weight: 800;
+	color: rgb(253, 42, 0);
 }
