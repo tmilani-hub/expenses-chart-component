@@ -36,6 +36,7 @@ h1 {
 .grid-organize {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	align-items: end;
 	gap: 12px;
 }
 #depense {
