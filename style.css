@@ -65,9 +65,15 @@ h1 {
 	align-items: stretch;
 	justify-content: start;
 	gap: 8px;
-	height: 160px;
-	scroll-behavior: auto;
+	height: 240px;
+	overflow-y: scroll;
+	scroll-behavior: none;
 }
+
+#liste::-webkit-scrollbar {
+	display: none;
+}
+
 .listeobject {
 	padding: 12px 24px;
 	border: 2px solid rgba(236, 117, 93, 1);

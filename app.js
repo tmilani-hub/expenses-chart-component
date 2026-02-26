@@ -2,7 +2,7 @@
 const $inp_spend = document.querySelector("#depense");
 const $form = document.querySelector("#form");
 const $h2 = document.querySelector("#h2");
-const $liste = document.querySelector("#liste")
+const $liste = document.querySelector("#liste");
 // ALL variable
 let liste = [];
 let liste_object = [];
@@ -19,20 +19,24 @@ function CrateObjecListeDiv(word) {
 	$div.appendChild($btn);
 	$btn.addEventListener("click", () => {
 		$div.remove();
-		for (let i = 0; i < liste.length; i++)
+		for (let i = 0; i < liste.length; i++) {
+			if (liste[i] === word) {
+				liste.shift[i];
+			}
+		}
 	});
-	liste_object.appendChild($div)
+	liste_object.push($div);
 	return $div;
 }
 // ALL addeventlistener
 $form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
-	for (let i = 0; i < liste.length; i++) [
-		liste_object[i].remove()
-	]
-	liste_object = []
-	liste.appendChild($inp_spend.value);
+	for (let i = 0; i < liste.length; i++) {
+		liste_object[i].remove();
+	}
+	liste_object = [];
+	liste.push($inp_spend.value);
 	liste.sort();
 
 	for (let i = 0; i < liste.length; i++) {
@@ -42,7 +46,7 @@ $form.addEventListener("submit", (e) => {
 	}
 	if (liste.length < 1) {
 		$h2.classList.remove("none");
-	}else{
+	} else {
 		$h2.classList.add("none");
 	}
 
